@@ -2,7 +2,7 @@ name: pubsub
 description: A new Flutter plugin for google cloud Pub/Sub.
 version: 0.0.1
 author: Charlie Yu
-homepage:
+homepage: https://github.com/charlie0840/FlutterPubSubPlugin
 
 environment:
   sdk: ">=2.0.0-dev.68.0 <3.0.0"

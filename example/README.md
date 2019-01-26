@@ -1,7 +1,6 @@
 # pubsub_example
 
-Demonstrates how to use the pubsub plugin.
-
+A new Flutter plugin for sending json to google cloud Pub/Sub in android
 ## Getting Started
 
 This project is a starting point for a Flutter application.

@@ -6,7 +6,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1b083a9b-3107-4beb-a82d-fdf8608ce75e" name="Default" comment="" />
+    <list default="true" id="1b083a9b-3107-4beb-a82d-fdf8608ce75e" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
     <ignored path="$PROJECT_DIR$/.pub/" />
@@ -75,8 +77,8 @@
       <file leaf-file-name="pubspec.yaml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pubspec.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="51" selection-start-line="1" selection-start-column="51" selection-end-line="1" selection-end-column="51" />
+            <state relative-caret-position="60">
+              <caret line="4" column="60" selection-start-line="4" selection-start-column="60" selection-end-line="4" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -95,6 +97,9 @@
       <find>includeCompileClasspath</find>
       <find>META-INF</find>
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -115,6 +120,7 @@
     <option name="width" value="1920" />
     <option name="height" value="1036" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -399,11 +405,11 @@
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Flutter Performance" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32897604" />
-      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32897604" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32897604" />
       <window_info id="Captures" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24973376" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24973376" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="Fabric" order="3" />
       <window_info anchor="right" id="Theme Preview" order="3" />
@@ -508,8 +514,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pubspec.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="51" selection-start-line="1" selection-start-column="51" selection-end-line="1" selection-end-column="51" />
+        <state relative-caret-position="60">
+          <caret line="4" column="60" selection-start-line="4" selection-start-column="60" selection-end-line="4" selection-end-column="60" />
         </state>
       </provider>
     </entry>
