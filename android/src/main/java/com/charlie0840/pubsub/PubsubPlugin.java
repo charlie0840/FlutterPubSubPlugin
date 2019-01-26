@@ -28,6 +28,9 @@ import io.flutter.plugin.common.PluginRegistry.Registrar;
 /** PubsubPlugin */
 public class PubsubPlugin implements MethodCallHandler {
     /** Plugin registration. */
+    ProjectTopicName topicName;
+    Publisher publisher = null;
+
     public static void registerWith(Registrar registrar) {
         final MethodChannel channel = new MethodChannel(registrar.messenger(), "pubsub");
         channel.setMethodCallHandler(new PubsubPlugin());
@@ -36,22 +39,24 @@ public class PubsubPlugin implements MethodCallHandler {
     @Override
     public void onMethodCall(MethodCall call, Result result) {
         String callStr = call.method;
-        Map<String, String> map = (Map<String, String>)call.arguments;
-        switch(callStr) {
-            case "getPlatformVersion":
-                result.success("Android " + getPlatformVersion());
-                break;
+        Map<String, String> map = (Map<String, String>) call.arguments;
+        switch (callStr) {
             case "sendJson":
                 result.success(sendJson(map));
                 break;
-            case "showToast":
-                System.out.println("hello world!");
+            case "setProjectTopicName":
+                result.success(setProjectTopicName(map));
                 break;
-        }
 
+        }
     }
-    public String getPlatformVersion() {
-        return android.os.Build.VERSION.RELEASE;
+
+    public int setProjectTopicName(Map<String, String> map) {
+        String projectId = map.get("projectID");
+        String topicId = map.get("topicID");
+        topicName = ProjectTopicName.of(projectId, topicId);
+        publisher = Publisher.newBuilder(topicName).build();
+        return 0;
     }
 
     public int sendJson(Map<String, String> map) {
@@ -61,8 +66,6 @@ public class PubsubPlugin implements MethodCallHandler {
 
         String jsonString = "";
 
-        ProjectTopicName topicName = ProjectTopicName.of("my-project-id", "my-topic-id");
-        Publisher publisher = null;
 
         try {
             jsonString = new JSONObject()
@@ -76,7 +79,6 @@ public class PubsubPlugin implements MethodCallHandler {
 
         try {
             // Create a publisher instance with default settings bound to the topic
-            publisher = Publisher.newBuilder(topicName).build();
             ByteString data = ByteString.copyFromUtf8(jsonString);
             PubsubMessage pubsubMessage = PubsubMessage.newBuilder().setData(data).build();
 

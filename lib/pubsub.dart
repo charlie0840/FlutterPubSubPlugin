@@ -6,13 +6,12 @@ class Pubsub {
   static const MethodChannel _channel =
       const MethodChannel('pubsub');
 
-  static Future<String> get platformVersion async {
-    final String version = await _channel.invokeMethod('getPlatformVersion');
-    return version;
-  }
-
-  static Future<Null> showToast(String msg) async {
-    await _channel.invokeMethod('showToast');
+  static Future<int> setProjectTopicName(String projectID, String topicID) async {
+    Map<String, String> map = new Map();
+    map.putIfAbsent("projectID", ()=>projectID);
+    map.putIfAbsent("topicID", ()=>topicID);
+    int res = await _channel.invokeMethod('setProjectTopicName', map);
+    return res;
   }
 
   static Future<int> sendJson(Map<String, String> map) async {
